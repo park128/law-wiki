@@ -13,17 +13,15 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS iris(
-            sepal_length FLOAT NOT NULL,
-            sepal_width FLOAT NOT NULL,
-            pepal_length FLOAT NOT NULL,
-            pepal_width FLOAT NOT NULL,
-            species VARCHAR(100) NOT NULL
+        CREATE TABLE law(
+            category text primary key,
+            term text,
+            explain text
         );"""
     )
-    data = pd.read_csv('data/iris.csv')
+    data = pd.read_csv('data/law.csv')
     print(data)
-    data.to_sql(name='iris', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='law', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
