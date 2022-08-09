@@ -13,15 +13,15 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE law(
-            category text primary key,
+        CREATE TABLE law2(
+            category text,
             term text,
             explain text
         );"""
     )
     data = pd.read_csv('data/law.csv')
     print(data)
-    data.to_sql(name='law', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='law2', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
@@ -29,7 +29,6 @@ app = Flask(__name__)
 def index():
     db_create()
     return "Hello World!!!!!"
-
 
 
 if __name__ == "__main__":
