@@ -13,14 +13,14 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS law(
-            correct TEXT,
-            question TEXT
+        CREATE TABLE IF NOT EXISTS user(
+            name TEXT,
+            score INT
         );"""
     )
-    data = pd.read_csv('data/law.csv')
+    data = pd.read_csv('data/user.csv')
     print(data)
-    data.to_sql(name='law', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='user', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
