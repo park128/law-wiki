@@ -13,9 +13,9 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF EXISTS law(
+        CREATE TABLE IF NOT EXISTS law(
             correct text,
-            question text,
+            question text
         );"""
     )
     data = pd.read_csv('data/law.csv')
@@ -27,7 +27,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     db_create()
-    return "Hello World!!!!!"
+    return "Hello World!!!!!!!"
 
 
 if __name__ == "__main__":
