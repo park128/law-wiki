@@ -13,7 +13,7 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE law(
+        CREATE TABLE IF EXISTS law(
             correct text,
             question text,
         );"""
