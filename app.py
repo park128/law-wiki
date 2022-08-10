@@ -13,15 +13,14 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE law2(
-            category text,
-            term text,
-            explain text
+        CREATE TABLE law(
+            correct text,
+            question text,
         );"""
     )
     data = pd.read_csv('data/law.csv')
     print(data)
-    data.to_sql(name='law2', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='law', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
