@@ -14,8 +14,8 @@ def db_create():
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS law(
-            correct text,
-            question text
+            correct TEXT,
+            question TEXT
         );"""
     )
     data = pd.read_csv('data/law.csv')
