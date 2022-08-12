@@ -6,21 +6,25 @@
         <link href="\css/wiki.css" rel="stylesheet">
     </head>
     <body>
-        <div class="box">
-            <div class="title">법률용어 모음집</div>
-            <div class="close"></div>
+        <div id="popup_title_container">
+            <div id="popup_title">법률용어 모음집</div>
+            <div id="popup_close">
+                <a href="#" onclick="window.close();">
+                <img src="/images/css/img_btnPopClose.png" alt="창닫기">
+                </a>
+            </div>
         </div>
-        <div class="area">
-            <div class="north"></div>
-            <div class="contents">
-                <div class="form">
+        <div class="popup_search_area">
+            <div class="popup_search_line_north"></div>
+            <div class="popup_search_contents">
+                <div class="popup_search_form">
                     <form action="Lawwiki.html" method="post" onsubmit="return doSearch(this);">
                     <input type="text" class="search_text" name="pkeyword" value>
-                    <input type="image" sre="/images/css/btn_serch.gif" alt="검색">
+                    <input type="image" src="/images/css/btn_serch.gif" alt="검색">
                     </form>
                 </div>
                 <div id="popup_search_index">
-                    <ul class="test_list">
+                    <ul class="inline">
                         <li>
                             <a href="legalterm.html?pHangulPrefix=-1">
                                 <img src="/images/css/hangul_all.gif" alt="전체">
@@ -99,10 +103,68 @@
                     </ul>
                 </div>
             </div>
-            <div class="search_line_south"></div>
+            <div class="popup_search_line_south"></div>
         </div>
-        <div>
-
+        <div id="popup_contents_contatner">
+            <div id="popup_contents_result">
+                <div id="search_contents">
+                    <div class="popup_title_blue"> 검색내용 <div>
+                    <div id="search_contents_area">
+                        <ul id="search_contents_list">
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com" target="word_description_area">네이버</a>
+                            </li>
+                        </ul>
+                        <div id="search_contents_paging" class="paging">
+                            <div class="paging_old">
+                                <span class="paging_old_pages">
+                                    <a href="javascript:movePage('2');">2</a>
+                                    <a href="javascript:movePage('3');">3</a>
+                                </span>
+                                <span class="paging_button">
+                                    <a href="javascript:movePage('4');">
+                                        <img src="/images/css/btn_next.gif" alt="4페이지로 이동">
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="word_description">
+                    <div class="popup_title_blue"> 용어설명 </div>
+                </div>
+            </div>
+            
         </div>
     </body>
 </html>
