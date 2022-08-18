@@ -34,7 +34,7 @@ def quiz():
         
                     "basicCard": {
                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[0,1]
+                        "description": result[0,1],
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -72,7 +72,7 @@ def quiz2():
         
                     "basicCard": {
                         "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[1,1]
+                        "description": result[1,1],
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -110,7 +110,7 @@ def quiz3():
         
                     "basicCard": {
                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[2,0]
+                        "description": result[2,0],
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
