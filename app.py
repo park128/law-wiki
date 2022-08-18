@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from flask import Flask
-import pandas as pd 
+import sys
+import random
+import pandas as pd
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 
 ## DB 연결 Local
@@ -13,14 +15,14 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS user(
-            name TEXT,
-            score INT
+        CREATE TABLE IF NOT EXISTS law_Quiz(
+            correct TEXT,
+            question TEXT
         );"""
     )
-    data = pd.read_csv('data/user.csv')
+    data = pd.read_csv('data/law_Quiz.csv')
     print(data)
-    data.to_sql(name='user', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='law_Quiz', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
