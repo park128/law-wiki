@@ -23,6 +23,7 @@ app = Flask(__name__)
 
 @app.route("/quiz", methods = ['post'])
 def quiz():
+    result = df.sample(3)
     body = request.get_json()
     print(body)
     response = {
@@ -61,6 +62,7 @@ def quiz():
 
 @app.route("/quiz2", methods = ['post'])
 def quiz2():
+    result = df.sample(3)
     body = request.get_json()
     print(body)
     response = {
@@ -98,6 +100,7 @@ def quiz2():
 
 @app.route("/quiz3", methods = ['post'])
 def quiz3():
+    result = df.sample(3)
     body = request.get_json()
     print(body)
     response = {
