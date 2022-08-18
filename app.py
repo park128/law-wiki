@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from flask import Flask
+from flask import Flask, jsonify, request
 import sys
+import json
 import random
 import pandas as pd
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
@@ -70,4 +71,3 @@ def quiz():
 if __name__ == "__main__":
     #db_create()
     app.run(host='0.0.0.0', port=int(args[1]),debug=True)
-
