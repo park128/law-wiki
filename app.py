@@ -124,7 +124,7 @@ def quiz3():
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": result[2,0]",# 버튼 3내용
+                                "label": result[2,0], # 버튼 3내용
                                 "blockId": "정답일때테스트" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
