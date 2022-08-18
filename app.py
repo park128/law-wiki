@@ -14,16 +14,19 @@ script = "SELECT * FROM law"
 df = pd.read_sql(script, conn)
 print(df.head())
 
-#문제와 정답만들기
-result = df.sample(3)
-print(result)
-#우선 용어와 설명 분리
-result = np.array(result)
 app = Flask(__name__)
 
 @app.route("/quiz", methods = ['post'])
 def quiz():
+    #문제와 정답만들기
     result = df.sample(3)
+    print(result)
+    result = np.array(result)
+
+    q1 = result[0,1]
+    a1 = result[0,0]
+    a2 = result[1,0]
+    a3 = result[2,0]
     body = request.get_json()
     print(body)
     response = {
@@ -34,21 +37,21 @@ def quiz():
         
                     "basicCard": {
                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[0,1],
+                        "description": q1,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": result[0,0], # 버튼 1 내용
+                                "label": a1, # 버튼 1 내용
                                 "blockId": "정답일때테스트" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
-                                "label": result[1,0], # 버튼 2 내용
+                                "label": a2, # 버튼 2 내용
                                 "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": result[2,0],# 버튼 3내용
+                                "label": a3,# 버튼 3내용
                                 "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
@@ -61,7 +64,16 @@ def quiz():
 
 @app.route("/quiz2", methods = ['post'])
 def quiz2():
+    #문제와 정답만들기
     result = df.sample(3)
+    print(result)
+    result = np.array(result)
+
+    q1 = result[0,1]
+    a1 = result[0,0]
+    a2 = result[1,0]
+    a3 = result[2,0]
+
     body = request.get_json()
     print(body)
     response = {
@@ -72,21 +84,21 @@ def quiz2():
         
                     "basicCard": {
                         "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[1,1],
+                        "description": q1,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": result[0,0], # 버튼 1 내용
+                                "label": a2, # 버튼 1 내용
                                 "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
-                                "label": result[1,0], # 버튼 2 내용
+                                "label": a1, # 버튼 2 내용
                                 "blockId": "정답일때테스트" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": result[2,0],# 버튼 3내용
+                                "label": a3,# 버튼 3내용
                                 "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
@@ -99,7 +111,16 @@ def quiz2():
 
 @app.route("/quiz3", methods = ['post'])
 def quiz3():
+    #문제와 정답만들기
     result = df.sample(3)
+    print(result)
+    result = np.array(result)
+
+    q1 = result[0,1]
+    a1 = result[0,0]
+    a2 = result[1,0]
+    a3 = result[2,0]
+
     body = request.get_json()
     print(body)
     response = {
@@ -110,21 +131,21 @@ def quiz3():
         
                     "basicCard": {
                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[2,0],
+                        "description": q1,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": result[0,0], # 버튼 1 내용
+                                "label": a2, # 버튼 1 내용
                                 "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
-                                "label": result[1,0], # 버튼 2 내용
+                                "label": a3, # 버튼 2 내용
                                 "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": result[2,0], # 버튼 3내용
+                                "label": a1, # 버튼 3내용
                                 "blockId": "정답일때테스트" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
