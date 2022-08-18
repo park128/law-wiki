@@ -18,7 +18,7 @@ def db_create():
     engine.execute("""
         CREATE TABLE IF NOT EXISTS lawQuiz(
             answer TEXT,
-            question TEXT
+            quzi TEXT
         );"""
     )
     data = pd.read_csv('data/lawQuiz.csv')
@@ -26,10 +26,6 @@ def db_create():
     data.to_sql(name='lawQuiz', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
-
-@app.route("/")
-def index():
-    return 'I LOVE JESUS'
 
 @app.route("/quiz", methods = ['post'])
 def quiz():
@@ -69,5 +65,5 @@ def quiz():
     return jsonify(response)
 
 if __name__ == "__main__":
-    #db_create()
+    db_create()
     app.run(host='0.0.0.0', port=int(args[1]),debug=True)
