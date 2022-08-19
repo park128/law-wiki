@@ -189,4 +189,4 @@ def rank():
 
 if __name__ == "__main__":
     #db_create() # 데이터 베이스 업로드
-    app.run(host='0.0.0.0', port=int(args[1]),debug=True)
+    app.run(debug=True)
