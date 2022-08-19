@@ -163,15 +163,22 @@ def rank():
     rankdata = pd.read_sql(rankscript, conn)
     ranklist = rankdata.head()
     body = request.get_json()
+    
+    ranklist = np.array(ranklist)
+    rank1 = ranklist[0,0]
+    rank2 = ranklist[1,0]
+    rank3 = ranklist[2,0]
+
     print(body)
     response = {
         "version": "2.0",
         "template": {
             "outputs": [
                 {
+        
                     "basicCard": {
                         "title": "TOP5", # basic 카드에 들어갈 제목
-                        "description": ranklist,
+                        "description": rank1 + rank2 + rank3,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
