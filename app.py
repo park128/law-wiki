@@ -160,6 +160,8 @@ def quiz3():
 @app.route("/rank", methods = ['post'])
 def rank():
     script = 'SELECT * FROM public."user"'
+    conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
+    conn=db.connect(conn_string)
     rankdata = pd.read_sql(script, conn)
     rank_list = rankdata.head()
     body = request.get_json()
@@ -186,7 +188,7 @@ def rank():
         }
     }
     return jsonify(response)
-
+    
 if __name__ == "__main__":
     #db_create() # 데이터 베이스 업로드
     app.run(debug=True)
