@@ -140,7 +140,7 @@ def quiz3():
 
 # 랭킹 버튼 누르면 들어가지는 코드
 @app.route("/rank", methods = ['post'])
-def test():
+def rank():
     script = 'SELECT * FROM public."user"'
     df = pd.read_sql(script, conn)
     rank_list = df.head()
