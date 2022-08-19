@@ -154,7 +154,7 @@ def rank():
         
                     "basicCard": {
                         "title": "TOP5", # basic 카드에 들어갈 제목
-                        "description": rank_list
+                        "description": rank_list,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
