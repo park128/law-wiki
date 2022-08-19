@@ -163,7 +163,7 @@ def rank():
     rankdata = pd.read_sql(rankscript, conn)
     ranklist = rankdata.head()
     body = request.get_json()
-
+    
     ranklist = np.array(ranklist)
     rank1 = ranklist[0,0]
     rank2 = ranklist[1,0]
@@ -182,8 +182,8 @@ def rank():
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": "62f2f8abfb4d7520b2bb5f06", # 버튼 1 내용
-                                "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                                "label": "처음으로", # 버튼 1 내용
+                                "blockId": "62f2f8abfb4d7520b2bb5f06" # 버튼 1에서 연결될 버튼 주소
                             },
                         ]
                     }
