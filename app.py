@@ -163,7 +163,7 @@ def rank():
     conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
     conn=db.connect(conn_string)
     rankdata = pd.read_sql(script, conn)
-    rank_list = rankdata.head()
+    ranklist = rankdata.head()
     body = request.get_json()
     print(body)
     response = {
@@ -174,7 +174,7 @@ def rank():
         
                     "basicCard": {
                         "title": "TOP5", # basic 카드에 들어갈 제목
-                        "description": rank_list,
+                        "description": ranklist,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -188,7 +188,7 @@ def rank():
         }
     }
     return jsonify(response)
-    
+
 if __name__ == "__main__":
     #db_create() # 데이터 베이스 업로드
     app.run(debug=True)
