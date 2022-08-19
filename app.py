@@ -156,6 +156,37 @@ def quiz3():
     }
     return jsonify(response)
 
+# 랭킹 버튼 누르면 들어가지는 코드
+@app.route("/rank", methods = ['post'])
+def rank():
+    script = 'SELECT * FROM public."user"'
+    rankdata = pd.read_sql(script, conn)
+    rank_list = rankdata.head()
+    body = request.get_json()
+    print(body)
+    response = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+        
+                    "basicCard": {
+                        "title": "TOP5", # basic 카드에 들어갈 제목
+                        "description": rank_list,
+                        "buttons": [ # basic 카드에 소속된 버튼 
+                            {
+                                "action": "block", # 버튼 1
+                                "label": "처음으로", # 버튼 1 내용
+                                "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                            },
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+    return jsonify(response)
+
 if __name__ == "__main__":
     #db_create() # 데이터 베이스 업로드
     app.run(host='0.0.0.0', port=int(args[1]),debug=True)
