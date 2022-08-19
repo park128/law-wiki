@@ -142,8 +142,8 @@ def quiz3():
 @app.route("/rank", methods = ['post'])
 def rank():
     script = 'SELECT * FROM public."user"'
-    df = pd.read_sql(script, conn)
-    rank_list = df.head()
+    rankdata = pd.read_sql(script, conn)
+    rank_list = rankdata.head()
     body = request.get_json()
     print(body)
     response = {
