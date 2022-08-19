@@ -47,12 +47,12 @@ def quiz():
                             {
                                 "action":  "block", # 버튼 2
                                 "label": a2, # 버튼 2 내용
-                                "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
+                                "blockId": "62fdef11745ef634f048234e" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
                                 "label": a3,# 버튼 3내용
-                                "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
+                                "blockId": "62fdef11745ef634f048234e" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
                     }
@@ -89,7 +89,7 @@ def quiz2():
                             {
                                 "action": "block", # 버튼 1
                                 "label": a2, # 버튼 1 내용
-                                "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "62fdef11745ef634f048234e" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
@@ -99,7 +99,7 @@ def quiz2():
                             {
                                 "action":  "block",# 버튼 3
                                 "label": a3,# 버튼 3내용
-                                "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
+                                "blockId": "62fdef11745ef634f048234e" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
                     }
@@ -136,12 +136,12 @@ def quiz3():
                             {
                                 "action": "block", # 버튼 1
                                 "label": a2, # 버튼 1 내용
-                                "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "62fdef11745ef634f048234e" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
                                 "label": a3, # 버튼 2 내용
-                                "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
+                                "blockId": "62fdef11745ef634f048234e" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
