@@ -10,7 +10,7 @@ import pandas as pd
 ## DB 연결 Local
 conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
 conn=db.connect(conn_string)
-script = "SELECT * FROM law"
+script = 'SELECT * FROM public"LQ"'
 df = pd.read_sql(script, conn)
 print(df.head())
 
@@ -42,7 +42,7 @@ def quiz():
                             {
                                 "action": "block", # 버튼 1
                                 "label": a1, # 버튼 1 내용
-                                "blockId": "정답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "62fdef0c8a1240569898e13d" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
@@ -94,7 +94,7 @@ def quiz2():
                             {
                                 "action":  "block", # 버튼 2
                                 "label": a1, # 버튼 2 내용
-                                "blockId": "정답일때테스트" # 버튼 2에서 연결될 버튼 주소
+                                "blockId": "62fdef0c8a1240569898e13d" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
@@ -146,7 +146,7 @@ def quiz3():
                             {
                                 "action":  "block",# 버튼 3
                                 "label": a1, # 버튼 3내용
-                                "blockId": "정답일때테스트" # 버튼 3에서 연결될 버튼 주소
+                                "blockId": "62fdef0c8a1240569898e13d" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
                     }

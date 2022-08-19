@@ -44,7 +44,7 @@ def quiz():
                             {
                                 "action": "block", # 버튼 1
                                 "label": "가등기권자", # 버튼 1 내용
-                                "blockId": "정답일때" # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "62fdef0c8a1240569898e13d" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
@@ -86,7 +86,7 @@ def quiz2():
                             {
                                 "action":  "block", # 버튼 2
                                 "label": "건축물관리대장", # 버튼 2 내용
-                                "blockId": "정답일때" # 버튼 2에서 연결될 버튼 주소
+                                "blockId": "62fdef0c8a1240569898e13d" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
@@ -128,7 +128,7 @@ def quiz3():
                             {
                                 "action":  "block",# 버튼 3
                                 "label": "낙찰자",# 버튼 3내용
-                                "blockId": "정답일때" # 버튼 3에서 연결될 버튼 주소
+                                "blockId": "62fdef0c8a1240569898e13d" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
                     }
