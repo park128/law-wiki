@@ -10,7 +10,7 @@ import pandas as pd
 ## DB 연결 Local
 conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
 conn=db.connect(conn_string)
-script = "SELECT * FROM lawQuiz"
+script = 'SELECT * FROM public."LQ1"'
 df = pd.read_sql(script, conn)
 print(df.head())
 
