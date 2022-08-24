@@ -193,9 +193,9 @@ def rank():
     }
     return jsonify(response)
 
-@app.route("/", methods = ['post'])
+@app.route("/")
 def hello_world():
-    return render_template('Lawwiki.html')
+    return render_template('lawwiki.html')
 
 
 
