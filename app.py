@@ -195,7 +195,7 @@ def rank():
 
 @app.route("/", methods = ['post'])
 def hello_world():
-    return render_html('Lawwiki.html')
+    return render_template('Lawwiki.html')
 
 
 
