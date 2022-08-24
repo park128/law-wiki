@@ -22,7 +22,6 @@ div#popup_title_container {
 }
 
 div#popup_title_container div#popup_title {
-  float: left;
   padding-left: 20px;
   font-size: 18px;
   color: #fff;
@@ -49,7 +48,6 @@ img, fieldset {
 .popup_search_area div.popup_search_line_north {
   width: 548px;
   height: 6px;
-  float: left;
   font-size: 0;
   line-height: 0;
   background: url(/images/css/box_top.gif) no-repeat;
@@ -57,7 +55,6 @@ img, fieldset {
 
 .popup_search_area div.popup_search_contents {
   width: 506px;
-  float: left;
   padding: 15px 10px 15px 30px;
   border: solid #D5D5D5;
   border-width: 0 1px;
@@ -96,6 +93,10 @@ ul, li, ol {
   list-style: none;
 }
 
+u.linline {
+  font-size: 0;
+}
+
 ul.inline li {
   display: inline;
   margin-right: 5px;
@@ -104,7 +105,6 @@ ul.inline li {
 .popup_search_area div.popup_search_line_south {
   width: 548px;
   height: 5px;
-  float: left;
   font-size: 0;
   line-height: 0;
   background: url(/images/css/box_bottom.gif) no-repeat;
@@ -190,11 +190,17 @@ div.paging_old img {
 }
 
 
-div#popup_search_result 
 div#word_description {
   width: 322px;
   _width: 317px;
   float: left;
+}
+
+#word_description_area {
+  width: 320px;
+  _width: 315px;
+  height: 276px;
+  border: 1px solid #CACACA;
 }
 
 div#popup_contents_container div.popup_title_blue {

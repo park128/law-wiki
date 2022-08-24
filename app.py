@@ -193,6 +193,13 @@ def rank():
     }
     return jsonify(response)
 
+@app.route("/")
+def hello_world():
+    return render_html('Lawwiki.html')
+
+
+
+
 if __name__ == "__main__":
     #db_create() # 데이터 베이스 업로드
     app.run(debug=True)
