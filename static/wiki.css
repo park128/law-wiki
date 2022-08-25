@@ -50,7 +50,7 @@ img, fieldset {
   height: 6px;
   font-size: 0;
   line-height: 0;
-  background: url(/images/css/box_top.gif) no-repeat;
+  background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/box_top.gif) no-repeat;
 }
 
 .popup_search_area div.popup_search_contents {
@@ -66,14 +66,14 @@ img, fieldset {
   padding-left: 15px;
   font-weight: bold;
   color: #145DAA;
-  background: url(/images/css/icon_f1.gif) no-repeat;
+  background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/icon_f1.gif) no-repeat;
 }
 
 
 
 .popup_search_area div.popup_search_form {
   padding-left: 30px;
-  background: url(/images/css/icon_f2.gif) no-repeat;
+  background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/icon_f2.gif) no-repeat;
 }
 
 .popup_search_area input.search_text {
@@ -107,7 +107,7 @@ ul.inline li {
   height: 5px;
   font-size: 0;
   line-height: 0;
-  background: url(/images/css/box_bottom.gif) no-repeat;
+  background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/box_bottom.gif) no-repeat;
 }
 
 div#popup_contents_container {
@@ -208,5 +208,5 @@ div#popup_contents_container div.popup_title_blue {
   padding-left: 15px;
   font-weight: bold;
   color: #145DAA;
-  background: url(/images/css/icon_f1\ \(1\).gif) no-repeat;
+  background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/icon_f1\ \(1\).gif) no-repeat;
 }
