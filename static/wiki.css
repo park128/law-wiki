@@ -210,3 +210,10 @@ div#popup_contents_container div.popup_title_blue {
   color: #145DAA;
   background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/icon_f1\ \(1\).gif) no-repeat;
 }
+
+@media  and (max-width: 1200px) {
+  .main-title{
+    font-size: 30px;
+  }
+  
+}
