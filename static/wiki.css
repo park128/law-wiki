@@ -213,8 +213,8 @@ div#popup_contents_container div.popup_title_blue {
 }
 
 @media  and (max-width: 1200px) {
-  .main-title{
-    font-size: 30px;
+  .popup_search_area {
+  width: 120%;
   }
   
 }
