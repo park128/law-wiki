@@ -98,7 +98,7 @@ def quiz2():
                                 "blockId": "62fdef0c8a1240569898e13d" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
-                                "action":  "block",# 버튼 3
+                                "action":  "block",#  버튼 3
                                 "label": a3,# 버튼 3내용
                                 "blockId": "62fdef11745ef634f048234e" # 버튼 3에서 연결될 버튼 주소
                             }   
