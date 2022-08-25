@@ -13,12 +13,6 @@ body {
   font-size: 12px;
 }
 
-div#popup_title_container:after {
-  content: '';
-  display: block;
-  clear: both;
-  }
-
 div#popup_title_container {
   width: 100%;
   height: 51px;
@@ -48,7 +42,7 @@ img, fieldset {
 }
 
 .popup_search_area {
-  width: 56%;
+  width: 548px;
   margin: 20px auto 0 auto;
 }
 
@@ -124,7 +118,7 @@ div#popup_contents_container {
 }
 
 div#popup_contents_container div#popup_search_result {
-  width: 56%;
+  width: 548px;
   margin: 0 auto;
 }
 
@@ -218,32 +212,9 @@ div#popup_contents_container div.popup_title_blue {
   background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/icon_f1\ \(1\).gif) no-repeat;
 }
 
-@media screen and (max-width: 767px) {
-  .popup_search_area div.popup_search_line_north {
-    width: 100%;}
-  .popup_search_area div.popup_search_contents {
-    width: 98%;
-    }
-   .popup_search_area input.search_text {
-    width: 72%;
-    }
-   .popup_search_area div.popup_search_line_south {
-    width: 100%;
-    }
-   .popup_search_result div#search_contents {
-    width: 37%;
-    }
-    div#search_contents div#search_contents_area {
-    width: 37%;
-    }
-    div#search_contents_area div#search_contents_paging {
-    width: 37%;
-    }
-    div#word_description {
-    width: 58%;
-    }
-    #word_description_area {
-    width: 58%;
-    }
-    
+@media  and (max-width: 1200px) {
+  .main-title{
+    font-size: 30px;
   }
+  
+}
