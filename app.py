@@ -16,7 +16,6 @@ print(df.head())
 
 app = Flask(__name__)
 
-count = 0
 
 @app.route("/quiz", methods = ['post'])
 def quiz():
@@ -39,7 +38,7 @@ def quiz():
                 {
         
                     "basicCard": {
-                       "title": "문제" + count, # basic 카드에 들어갈 제목
+                       "title": "문제", # basic 카드에 들어갈 제목
                         "description": q1,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
@@ -71,8 +70,7 @@ def quiz2():
     result = df.sample(3)
     print(result)
     result = np.array(result)
-    count += 1
-    return jsonify(response)
+
     q1 = result[0,1]
     a1 = result[0,0]
     a2 = result[1,0]
@@ -119,8 +117,7 @@ def quiz3():
     result = df.sample(3)
     print(result)
     result = np.array(result)
-    count += 1
-    return jsonify(response)
+
     q1 = result[0,1]
     a1 = result[0,0]
     a2 = result[1,0]
