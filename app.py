@@ -183,7 +183,7 @@ def rank():
                             {
                                 "action": "block", # 버튼 1
                                 "label": "처음으로", # 버튼 1 내용
-                                "blockId": "62f2f8abfb4d7520b2bb5f06" # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "62f2f8abfb4d7520b2bb5f06"    # 버튼 1에서 연결될 버튼 주소
                             },
                         ]
                     }
