@@ -23,8 +23,7 @@ def quiz():
     result = df.sample(3)
     print(result)
     result = np.array(result)
-    count += 1
-    return jsonify(response)
+
     q1 = result[0,1]
     a1 = result[0,0]
     a2 = result[1,0]
