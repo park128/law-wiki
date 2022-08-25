@@ -39,7 +39,7 @@ def quiz():
                 {
         
                     "basicCard": {
-                       "title": "문제", # basic 카드에 들어갈 제목
+                       "title": "문제" + countcheck, # basic 카드에 들어갈 제목
                         "description": q1,
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
