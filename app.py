@@ -16,6 +16,7 @@ print(df.head())
 
 app = Flask(__name__)
 
+
 @app.route("/quiz", methods = ['post'])
 def quiz():
     #문제와 정답만들기
@@ -193,7 +194,7 @@ def rank():
     }
     return jsonify(response)
 
-@app.route('/wiki', methods = ['post'])
+@app.route('/')
 def home():
     return render_template('lawwiki.html')
 
