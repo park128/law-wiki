@@ -16,6 +16,7 @@ print(df.head())
 
 app = Flask(__name__)
 
+count = 0
 
 @app.route("/quiz", methods = ['post'])
 def quiz():
@@ -42,7 +43,7 @@ def quiz():
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": a1, # 버튼 1 내용
+                                "label": a1 + count, # 버튼 1 내용
                                 "blockId": "62fdef0c8a1240569898e13d" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
@@ -61,6 +62,7 @@ def quiz():
             ]
         }
     }
+    count += 1
     return jsonify(response)
 
 @app.route("/quiz2", methods = ['post'])
@@ -108,6 +110,7 @@ def quiz2():
             ]
         }
     }
+    count += 1
     return jsonify(response)
 
 @app.route("/quiz3", methods = ['post'])
@@ -155,6 +158,7 @@ def quiz3():
             ]
         }
     }
+    count += 1
     return jsonify(response)
 
 # 랭킹 버튼 누르면 들어가지는 코드
