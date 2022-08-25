@@ -24,7 +24,8 @@ def quiz():
     result = df.sample(3)
     print(result)
     result = np.array(result)
-
+    count += 1
+    return jsonify(response)
     q1 = result[0,1]
     a1 = result[0,0]
     a2 = result[1,0]
@@ -43,7 +44,7 @@ def quiz():
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": a1 + count, # 버튼 1 내용
+                                "label": a1, # 버튼 1 내용
                                 "blockId": "62fdef0c8a1240569898e13d" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
@@ -62,7 +63,6 @@ def quiz():
             ]
         }
     }
-    count += 1
     return jsonify(response)
 
 @app.route("/quiz2", methods = ['post'])
@@ -71,7 +71,8 @@ def quiz2():
     result = df.sample(3)
     print(result)
     result = np.array(result)
-
+    count += 1
+    return jsonify(response)
     q1 = result[0,1]
     a1 = result[0,0]
     a2 = result[1,0]
@@ -110,7 +111,6 @@ def quiz2():
             ]
         }
     }
-    count += 1
     return jsonify(response)
 
 @app.route("/quiz3", methods = ['post'])
@@ -119,7 +119,8 @@ def quiz3():
     result = df.sample(3)
     print(result)
     result = np.array(result)
-
+    count += 1
+    return jsonify(response)
     q1 = result[0,1]
     a1 = result[0,0]
     a2 = result[1,0]
@@ -158,7 +159,6 @@ def quiz3():
             ]
         }
     }
-    count += 1
     return jsonify(response)
 
 # 랭킹 버튼 누르면 들어가지는 코드
