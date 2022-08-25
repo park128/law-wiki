@@ -16,7 +16,7 @@ print(df.head())
 
 app = Flask(__name__)
 
-count = 0
+count = int(0)
 
 @app.route("/quiz", methods = ['post'])
 def quiz():
