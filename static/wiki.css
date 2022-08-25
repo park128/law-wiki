@@ -218,9 +218,31 @@ div#popup_contents_container div.popup_title_blue {
   background: url(https://raw.githubusercontent.com/park128/law-wiki/main/images/css/icon_f1\ \(1\).gif) no-repeat;
 }
 
-@media  and (max-width: 1200px) {
-  .main-title{
-    font-size: 30px;
+@media screen and (max-width: 767px) {
+  .popup_search_area div.popup_search_line_north {
+    width: 55%;}
+  .popup_search_area div.popup_search_contents {
+    width: 51%;
+    }
+   .popup_search_area input.search_text {
+    width: 40%;
+    }
+   .popup_search_area div.popup_search_line_south {
+    width: 55%;
+    }
+   .popup_search_result div#search_contents {
+    width: 20%;
+    }
+    div#search_contents div#search_contents_area {
+    width: 20%;
+    }
+    div#search_contents_area div#search_contents_paging {
+    width: 20%;
+    }
+    div#word_description {
+    width: 32%;
+    }
+    #word_description_area {
+    width: 32%;
+    }    
   }
-  
-}
