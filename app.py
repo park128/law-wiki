@@ -193,7 +193,7 @@ def rank():
     }
     return jsonify(response)
 
-@app.route('/')
+@app.route('/wiki' methods = ['post'])
 def home():
     return render_template('lawwiki.html')
 
