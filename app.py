@@ -205,7 +205,7 @@ def nickname():
     body = request.get_json()
     print(body)
     nick_name = body["action"]["params"]["sys_person_name"]
-    print(nick_name)
+    print(nickname)
     namecheck(nick_name)
     response = {
         "version": "2.0",
@@ -219,8 +219,8 @@ def nickname():
             ],
             "quickReplies": [
                 {
-                    "messageText": " 게임시작",
                     "action": "block",
+                    "label": " 게임시작",
                     "blockId": "62fdef0c8a1240569898e13d"
                 }
             ]
