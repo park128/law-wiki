@@ -16,7 +16,7 @@ def namecheck(nick_name):
 
     cur = conn.cursor()
     sql = "SELECT * FROM user;"
-    cur.excute(sql)
+    cur.execute(sql)
     rows = cur.fetchall()
     result = pd.DataFrame(rows)
     #불러왔다.
