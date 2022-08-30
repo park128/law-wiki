@@ -203,6 +203,23 @@ def home():
 def nickname():
     body = request.get_json()
     print(body)
+    print(body)
+    response = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+        
+                    "basicCard": {
+                        "title": "로그인", # basic 카드에 들어갈 제목
+                        "description": "닉네임을 입력해주세요 3~4자"
+                    }
+                }
+            ]
+        }
+    }
+    return jsonify(response)
+
 
 
 if __name__ == "__main__":
