@@ -52,7 +52,7 @@ def quiz():
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": a3,#    버튼 3내용
+                                "label": a3, # 버튼 3내용
                                 "blockId": "62fdef11745ef634f048234e" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
