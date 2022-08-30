@@ -212,16 +212,18 @@ def nickname():
         "template": {
             "outputs": [
                 {
-                    "simpleText": {
-                        "test": "이제 문제를 풀어볼까요?"
+        
+                    "basicCard": {
+                        "title": "로그인 완료", # basic 카드에 들어갈 제목
+                        "description": "게임을 시작해볼까요?"
+                        "buttons": [ # basic 카드에 소속된 버튼 
+                            {
+                                "action": "block", # 버튼 1
+                                "label": "게임시작", # 버튼 1 내용
+                                "blockId": "62fdef0c8a1240569898e13d"    # 버튼 1에서 연결될 버튼 주소
+                            },
+                        ]
                     }
-                }
-            ],
-            "quickReplies": [
-                {
-                    "action": "block",
-                    "label": " 게임시작",
-                    "blockId": "62fdef0c8a1240569898e13d"
                 }
             ]
         }
