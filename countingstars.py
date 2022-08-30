@@ -1,6 +1,11 @@
-import pandas as pd
+from flask import Flask, jsonify, request, render_template
+import os,sys, json
+import pandas as pd 
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
-
+import numpy as np
+import psycopg2 as db
+import pandas as pd
+import countingstars
 #데이터 베이스를 불러온다
 
 def namecheck(nick_name):
