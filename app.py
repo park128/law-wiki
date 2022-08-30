@@ -207,6 +207,7 @@ def nickname():
     nick_name = body["action"]["params"]["sys_person_name"]
     print(nickname)
     namecheck(nick_name)
+
     response = {
         "version": "2.0",
         "template": {
@@ -215,7 +216,7 @@ def nickname():
         
                     "basicCard": {
                         "title": "로그인 완료", # basic 카드에 들어갈 제목
-                        "description": "게임을 시작해볼까요?"
+                        "description": "게임을 시작해볼까요?",
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
