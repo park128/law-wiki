@@ -21,7 +21,7 @@ def namecheck(nick_name):
     result = pd.DataFrame(rows)
     #불러왔다.
     if result.find(nickname) == -1:
-        sql = "INSERT INTO user(이름, 점수) VALUES ("+ nickname + ", 0)"
+        sql = "INSERT INTO user(이름, 점수) VALUES ('{}', 0)".format(nick_name)
         cursor.excute(sql)
 
    
