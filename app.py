@@ -199,7 +199,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/nickname')
+@app.route('/nickname', methods = ['post'])
 def nickname():
     body = request.get_json()
     print(body)
