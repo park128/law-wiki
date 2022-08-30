@@ -8,7 +8,6 @@ import psycopg2 as db
 import pandas as pd
 import countingstars
 
-## DB 연결 Local
 conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
 conn=db.connect(conn_string)
 script = 'SELECT * FROM public."LQ1"'
@@ -213,7 +212,6 @@ def nickname():
         "template": {
             "outputs": [
                 {
-        
                     "basicCard": {
                         "title": "로그인 완료", # basic 카드에 들어갈 제목
                         "description": "게임을 시작해볼까요?",
