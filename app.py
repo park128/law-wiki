@@ -203,7 +203,7 @@ def home():
 def nickname():
     body = request.get_json()
     print(body)
-    nick_name = body["action"]["params"]["sys_person_name"]
+    nick_name = body["action"]["params"]["sys.person.name"]
     print(nickname)
     namecheck(nick_name)
 
