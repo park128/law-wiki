@@ -199,8 +199,8 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/name')
-def home():
+@app.route('/nickname')
+def nickname():
     body = request.get_json()
     print(body)
 
