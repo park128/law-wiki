@@ -204,9 +204,9 @@ def home():
 def nickname():
     body = request.get_json()
     print(body)
-    nickname = body["action"]["params"]["sys_person_name"]
-    print(nickname)
-    namecheck(nickname)
+    nick_name = body["action"]["params"]["sys_person_name"]
+    print(nick_name)
+    namecheck(nick_name)
     response = {
         "version": "2.0",
         "template": {
