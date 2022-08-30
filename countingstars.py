@@ -16,7 +16,7 @@ def namecheck(nick_name):
     script = 'SELECT * FROM public."user"'
     df = pd.read_sql(script, conn)
     print(df.head())
-
+    cursor = conn.cursor()
     sql = "SELECT * FROM user;"
     result = cursor.excute(sql)
     result = pd.DataFrame(result)
