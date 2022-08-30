@@ -199,6 +199,12 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/name')
+def home():
+    body = request.get_json()
+    print(body)
+
+
 if __name__ == "__main__":
     #db_create() # 데이터 베이스 업로드
     app.run(debug=True)
