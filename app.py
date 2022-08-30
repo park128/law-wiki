@@ -6,6 +6,7 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import numpy as np
 import psycopg2 as db
 import pandas as pd
+import countingstars
 
 ## DB 연결 Local
 conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
@@ -179,7 +180,7 @@ def rank():
         
                     "basicCard": {
                         "title": "TOP5", # basic 카드에 들어갈 제목
-                        "description": rank1 + rank2 + rank3,
+                        "description": rankup(),
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -203,6 +204,29 @@ def home():
 def nickname():
     body = request.get_json()
     print(body)
+    nickname = body["action"]["params"]["sys_person_name"]
+    print(nickname)
+    namecheck(nickname)
+    response = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "test": "이제 문제를 풀어볼까요?"
+                    }
+                }
+            ],
+            "quickReplies": [
+                {
+                    "messageText": " 게임시작",
+                    "action": "block",
+                    "blockId": "62fdef0c8a1240569898e13d"
+                }
+            ]
+        }
+    }
+    return jsonify(response)
 
 
 if __name__ == "__main__":
