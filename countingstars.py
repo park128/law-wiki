@@ -5,7 +5,6 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import numpy as np
 import psycopg2
 import pandas as pd
-import countingstars
 #데이터 베이스를 불러온다
 
 def namecheck(nick_name):
@@ -18,6 +17,7 @@ def namecheck(nick_name):
     sql = "SELECT * FROM user;"
     cur.execute(sql)
     rows = cur.fetchall()
+    print(rows)
     result = pd.DataFrame(rows)
     print(result)
     #불러왔다.
