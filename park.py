@@ -13,9 +13,9 @@ def db_create():
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS userrank(
+            personcode TEXT,
             name TEXT,
-            point INT,
-            personcode TEXT
+            point INT
         );"""
     )
     data = pd.read_csv('data/user.csv')
