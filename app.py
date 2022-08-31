@@ -225,5 +225,5 @@ def nickname():
 
 
 if __name__ == "__main__":
-    park.db_create() # 데이터 베이스 업로드
+    park.db_create() # 데이터 베이스 업로드4
     app.run(debug=True)
