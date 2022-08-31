@@ -20,10 +20,10 @@ def namecheck(nick_name):
     rows = cur.fetchall()
     result = pd.DataFrame(rows)
     #불러왔다.
-    
-    if (result["이름"] =! nick_name).any():
+
+    if (result["이름"] =! nick_name).all():
         sql = "INSERT INTO user(이름, 점수) VALUES ('{}', 0)".format(nick_name)
-        cursor.excute(sql)
+        cursor.execute(sql)
 
    
 def countingstar():
