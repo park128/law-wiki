@@ -18,7 +18,7 @@ def namecheck(nick_name):
     cur.execute(sql)
     rows = cur.fetchall()
     print(rows)
-    result = pd.DataFrame(rows)
+    result = pd.DataFrame(rows, Column=['name', 'point'])
     print(result)
     #불러왔다.
 
