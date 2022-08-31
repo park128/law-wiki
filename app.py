@@ -160,16 +160,7 @@ def quiz3():
 # 랭킹 버튼 누르면 들어가지는 코드
 @app.route("/rank", methods = ['post'])
 def rank():
-    rankscript = 'SELECT * FROM public."user"'
-    rankdata = pd.read_sql(rankscript, conn)
-    ranklist = rankdata.head()
     body = request.get_json()
-    
-    ranklist = np.array(ranklist)
-    rank1 = ranklist[0,0]
-    rank2 = ranklist[1,0]
-    rank3 = ranklist[2,0]
-
     print(body)
     response = {
         "version": "2.0",

@@ -23,7 +23,8 @@ def namecheck(nick_name):
 
     tfcheck = result.isin(nick_name).all(1)
     tfcount = 0
-    for True in tfcheck:
+
+    for 1 in tfcheck:
         tfcount += 1
 
     if tfcheck == 0:
