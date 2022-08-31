@@ -14,7 +14,7 @@ def db_create():
     engine.execute("""
         CREATE TABLE IF NOT EXISTS user(
             name TEXT,
-            point BIGINT
+            point int
         );"""
     )
     data = pd.read_csv('data/user.csv')
