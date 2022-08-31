@@ -13,7 +13,7 @@ def db_create():
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS user(
-            name TEXT,     
+            name TEXT,
             point BIGINT
         );"""
     )
