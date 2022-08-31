@@ -12,9 +12,9 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS user(
+        CREATE TABLE IF NOT EXISTS user1(
             name TEXT,
-            point int
+            point TEXT
         );"""
     )
     data = pd.read_csv('data/user.csv')
