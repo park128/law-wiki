@@ -18,7 +18,7 @@ def db_create():
             point INT
         );"""
     )
-    data = pd.read_csv('data/user.csv')
+    data = pd.read_csv('data/user.csv') 
     print(data)
     data.to_sql(name='userrank', con=engine, schema = 'public', if_exists='replace', index=False)
 
