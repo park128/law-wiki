@@ -12,7 +12,7 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS user1(
+        CREATE TABLE IF NOT EXISTS user(
             name TEXT,
             point TEXT
         );"""
