@@ -14,7 +14,7 @@ def db_create():
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS user(
-            name TEXT NOT NULL,
+            name TEXT NOT NULL,     
             point TEXT NOT NULL,
         );"""
     )
