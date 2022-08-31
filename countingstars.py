@@ -17,15 +17,14 @@ def namecheck(nick_name):
     sql = "SELECT * FROM public.userrank;"
     cur.execute(sql)
     rows = cur.fetchall()
-    print(rows)
     result = pd.DataFrame(rows, columns=['name', 'point'])
-    print(result)
     #불러왔다.
 
     if (result["name"] == nick_name).all():
-        #sql = "INSERT INTO user(이름, 점수) VALUES ('{}', 0)".format(nick_name)
-        #cursor.execute(sql)
         print(nick_name)
+    else:
+        sql = "INSERT INTO userrank(name, point) VALUES ('{}', 0)".format(nick_name)
+        cursor.execute(sql)
 
    
 def countingstar():

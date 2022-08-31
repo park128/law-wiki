@@ -198,6 +198,7 @@ def nickname():
     body = request.get_json()
     print(body)
     nick_name = body["action"]["detailParams"]["sys_person_name"]["value"]
+    personer_code = body["user"]["properties"]["plusfriendUserKey"]
     print(nick_name)
     countingstars.namecheck(nick_name)
 
@@ -208,12 +209,12 @@ def nickname():
                 {
                     "basicCard": {
                         "title": "로그인 완료", # basic 카드에 들어갈 제목
-                        "description": "게임을 시작해볼까요?",
+                        "description": "  ",
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
                                 "label": "게임시작", # 버튼 1 내용
-                                "blockId": "62fdef0c8a1240569898e13d"    # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "630dd720017a3b3908b24bad"    # 버튼 1에서 연결될 버튼 주소
                             },
                         ]
                     }
