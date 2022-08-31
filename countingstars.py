@@ -14,7 +14,7 @@ def namecheck(nick_name):
     conn=psycopg2.connect(conn_string)
 
     cur = conn.cursor()
-    sql = "SELECT * FROM public.'user';"
+    sql = "SELECT * FROM public.user;"
     cur.execute(sql)
     rows = cur.fetchall()
     print(rows)

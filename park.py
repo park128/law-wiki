@@ -12,14 +12,14 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS user(
+        CREATE TABLE IF NOT EXISTS userrank(
             name TEXT,
-            point TEXT
+            point INT
         );"""
     )
     data = pd.read_csv('data/user.csv')
     print(data)
-    data.to_sql(name='user', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='userrank', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
