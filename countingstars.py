@@ -21,7 +21,7 @@ def namecheck(nick_name):
     result = pd.DataFrame(rows)
     #불러왔다.
 
-    if (result["이름"] == nick_name).all():
+    if (result["name"] == nick_name).all():
         #sql = "INSERT INTO user(이름, 점수) VALUES ('{}', 0)".format(nick_name)
         #cursor.execute(sql)
         print(nick_name)
