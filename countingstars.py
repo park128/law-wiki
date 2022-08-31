@@ -17,19 +17,21 @@ def namecheck(nick_name):
     sql = "SELECT * FROM public.userrank;"
     cur.execute(sql)
     rows = cur.fetchall()
-    result = pd.DataFrame(rows, columns=['name', 'point'])
+    result = pd.DataFrame(rows, columns=['personercode','name', 'point'])
     #불러왔다.
 
     if (result["name"] == nick_name).all():
         print(nick_name)
     else:
-        sql = "INSERT INTO userrank(name, point) VALUES ('{}', 0)".format(nick_name)
+        sql = "INSERT INTO userrank(presonercode, name, point) VALUES ('{}', 0)".format(personer_code,nick_name)
         cursor.execute(sql)
 
    
 def countingstar():
     print("Tlqkf")   
+    sql = "UPDATE userrank SET point = point +1 WHERE {}".format(personer_code)
+    cursor.execute(sql)
 
 def rankup():
-    top5 = result.sort_values("점수", ascending=False)
+    top5 = result.sort_values("point", ascending=False)
     return top5.head
