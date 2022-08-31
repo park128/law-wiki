@@ -189,6 +189,7 @@ def rank():
 
 @app.route('/')
 def home():
+    park.db_create()
     return render_template('index.html')
 
 
