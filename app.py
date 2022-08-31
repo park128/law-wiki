@@ -7,6 +7,8 @@ import numpy as np
 import psycopg2 as db
 import pandas as pd
 import countingstars
+import park
+
 
 conn_string="dbname='ddtk33j69v200c' host='ec2-54-225-234-165.compute-1.amazonaws.com' user='uxweficayqkvnb' password='191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f'"
 conn=db.connect(conn_string)
@@ -222,5 +224,5 @@ def nickname():
 
 
 if __name__ == "__main__":
-    #db_create() # 데이터 베이스 업로드
+    park.db_create() # 데이터 베이스 업로드
     app.run(debug=True)
