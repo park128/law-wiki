@@ -19,6 +19,7 @@ def namecheck(nick_name):
     cur.execute(sql)
     rows = cur.fetchall()
     result = pd.DataFrame(rows)
+    print(result)
     #불러왔다.
 
     if (result["name"] == nick_name).all():
