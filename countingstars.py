@@ -20,14 +20,8 @@ def namecheck(nick_name):
     rows = cur.fetchall()
     result = pd.DataFrame(rows)
     #불러왔다.
-
-    tfcheck = result.isin(nick_name).all(1)
-    tfcount = 0
-
-    for 1 in tfcheck:
-        tfcount += 1
-
-    if tfcheck == 0:
+    
+    if (result["이름"] =! nick_name).any():
         sql = "INSERT INTO user(이름, 점수) VALUES ('{}', 0)".format(nick_name)
         cursor.excute(sql)
 
