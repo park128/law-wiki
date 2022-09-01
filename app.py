@@ -189,7 +189,7 @@ def rank():
 
 @app.route('/')
 def home():
-    park.db_create()
+    #park.db_create()
     return render_template('index.html')
 
 
@@ -197,9 +197,9 @@ def home():
 def nickname():
     body = request.get_json()
     print(body)
-    cream = name
+    #cream = name
     nick_name = body["action"]["detailParams"]["sys_person_name"]["value"]
-    personer_code = body[cream]["properties"]["plusfriendUserKey"]
+    #personer_code = body[cream]["properties"]["plusfriendUserKey"]
     print(nick_name)
     countingstars.namecheck(nick_name)
 
@@ -227,5 +227,5 @@ def nickname():
 
 
 if __name__ == "__main__":
-    park.db_create() # 데이터 베이스 업로드4
+    #park.db_create() # 데이터 베이스 업로드4
     app.run(debug=True)
