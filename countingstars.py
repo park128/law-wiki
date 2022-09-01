@@ -23,7 +23,7 @@ def namecheck(nick_name):
     if (result["name"] == nick_name).all():
         print(nick_name)
     else:
-        sql = "INSERT INTO userrank(presonercode, name, point) VALUES ('{}', 0)".format(personer_code,nick_name)
+        sql = "INSERT INTO userrank(presonercode, name, point) VALUES ('{}', 0)".format(personer_code,nick_name) 
         cursor.execute(sql)
 
    

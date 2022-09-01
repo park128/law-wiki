@@ -13,7 +13,6 @@ def db_create():
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS userrank(
-            personercode TEXT,
             name TEXT,
             point INT
         );"""

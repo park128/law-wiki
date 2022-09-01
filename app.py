@@ -197,9 +197,9 @@ def home():
 def nickname():
     body = request.get_json()
     print(body)
-    #cream = name
+    cream = "name"
     nick_name = body["action"]["detailParams"]["sys_person_name"]["value"]
-    #personer_code = body[cream]["properties"]["plusfriendUserKey"]
+    personer_code = body[cream]["properties"]["plusfriendUserKey"]
     print(nick_name)
     countingstars.namecheck(nick_name)
 
